@@ -1,0 +1,36 @@
+@import '../../../scss/application';
+@import '../../../scss/variables/colors';
+@import '../../../scss/variables/variables';
+
+.breadcrumb {
+  align-items: flex-start;
+  background-color: $background;
+  color: $gray;
+  display: flex;
+  flex-direction: row;
+  font-size: $text-sm;
+  justify-content: flex-start;
+  margin: 0 auto;
+  min-height: 10px;
+  padding: $spacing-simple 0;
+  width: 80%;
+
+  .breadcrumb-wrapper {
+    margin: 0 10px;
+  }
+  .last-category {
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .breadcrumb {
+    font-size: 10px;
+    margin-left: $spacing-simple;
+    width: 95%;
+
+    .breadcrumb-wrapper {
+      margin: 0 3px;
+    }
+  }
+}

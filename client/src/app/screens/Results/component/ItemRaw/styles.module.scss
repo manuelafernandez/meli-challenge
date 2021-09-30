@@ -1,0 +1,151 @@
+@import '../../../../../scss/application.scss';
+@import '../../../../../scss/variables/colors';
+@import '../../../../../scss/variables/variables';
+
+.itemsBox {
+  position: relative;
+
+  &:after {
+    background-color: $background;
+    bottom: 0;
+    height: 2px;
+    left: 3%;
+    position: absolute;
+    width: 95%;
+  }
+  .cardItem {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px $background;
+    }
+
+    .content {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 80%;
+
+      .properties {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+
+        .headline {
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-bottom: $spacing-double;
+          
+          .price {
+            font-size: $text-xl;
+            font-weight: normal;
+          }
+
+          .icon {
+            margin-left: $spacing-simple;
+            padding-top: 2px;
+            width: 22px;
+          }
+        }
+      }
+
+      .thumbnail {
+        border-radius: $rounded;
+        height: $sz-small;
+        padding: $spacing-simple;
+        width: $sz-small;
+      }
+
+      .shortDescription {
+        font-size: $text-lg;
+        font-weight: normal;
+        width: 80%;
+      }
+    }
+
+    .address {
+      color: $light-gray;
+      font-size: $text-xs;
+      font-weight: 600;
+      padding-right: 46px;
+      padding-top: 46px;
+      text-align: left;
+      width: 20%;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .itemsBox {
+    .cardItem {
+      .content {
+        .properties {
+          .headline {
+            .price {
+              font-size: $text-lg;
+              font-weight: normal;
+            }
+          }
+        }
+        .thumbnail {
+          height: 120px;
+          width: 120px;
+        }
+        .shortDescription {
+          font-size: $text-sm;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .itemsBox {
+    .cardItem {
+      align-items: center;
+      flex-direction: column;
+      padding-top: $spacing-simple;
+      .content {
+        align-items: center;
+        flex-direction: column;
+        .properties {
+          align-items: center;
+          flex-direction: column;
+          .headline {
+            .price {
+              font-size: $text-lg;
+              font-weight: normal;
+            }
+          }
+        }
+        .thumbnail {
+          height: 150px;
+          width: 150px;
+        }
+        .shortDescription {
+          text-align: center;
+        }
+      }
+
+      .address {
+        color: $light-gray;
+        font-size: $text-xs;
+        font-weight: 600;
+        margin-bottom: $spacing-double;
+        padding-top: $spacing-double;
+        padding-right: 0;
+        text-align: center;
+        width: 50%;
+      }
+    }
+  }
+}

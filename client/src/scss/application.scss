@@ -1,0 +1,27 @@
+@import "./variables/colors";
+@import "./variables/variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $dark-gray;
+}
+
+header {
+  background-color: $yellow;
+}
+
+img {
+  max-width: 100%;
+}

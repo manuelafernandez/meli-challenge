@@ -1,0 +1,16 @@
+@import '../../../../../scss/application.scss';
+@import '../../../../../scss/variables/colors';
+@import '../../../../../scss/variables/variables';
+
+.mainContainer {
+  background-color: $white;
+  border-radius: $rounded;
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media screen and (max-width: 520px) {
+  .main-container {
+    width: 90%;
+  }
+}
