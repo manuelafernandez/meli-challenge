@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ItemService } from '../../../services/item.services';
+import { GetItem } from '../../../services/item.services';
 import { RouteComponentProps } from 'react-router-dom';
 
 import ItemDetails from './component';
@@ -18,7 +18,7 @@ function Item(props: RouteComponentProps<any>) {
   }, [props.location.search, props.match.params, props.match.params.id]);
 
   const getItem = async (id: string) => {
-    const result = await ItemService.get(id)
+    const result = await GetItem(id)
 
     try {
       setItem(result);

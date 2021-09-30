@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ItemService } from '../../../services/item.services';
+import { SearchItem } from '../../../services/item.services';
 import { useHistory } from 'react-router-dom';
 import { RouteComponentProps } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ function Results(props: RouteComponentProps<any>) {
   }, [props.location.search, props.match.params.id]);
 
   const searchItems = async () => {
-    const { items, categories } = await ItemService.search(props.location.search.substring(8).toString())
+    const { items, categories } = await SearchItem(props.location.search.substring(8).toString())
 
     try {
       if (items) {
