@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { ItemsController }from '../controllers/items.controller';
+import { GetController, SearchController } from '../controllers/items.controller';
 
 const itemRouter = Router();
 
-itemRouter.get('/items', ItemsController.search);
-itemRouter.get('/items/:id', ItemsController.get);
+itemRouter.get('/items', SearchController);
+itemRouter.get('/items/:id', GetController);
 
 export default itemRouter;
